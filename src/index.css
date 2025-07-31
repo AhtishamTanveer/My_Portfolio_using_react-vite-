@@ -1,0 +1,158 @@
+:root {
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+
+  --text-color: #222;
+  --bg-gradient: linear-gradient(to right, #d3cce3, #e9e4f0);
+  --primary-color: #2d89ef;
+  --highlight-color: #ffd700;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-gradient);
+  color: var(--text-color);
+  min-height: 100vh;
+  scroll-behavior: smooth;
+}
+
+/* Navbar */
+nav.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: var(--primary-color);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+}
+
+ul.navbar-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 0;
+  padding: 16px 0;
+}
+
+ul.navbar-links li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+ul.navbar-links li a:hover {
+  color: var(--highlight-color);
+}
+
+/* Sections */
+section {
+  padding: 100px 20px 60px;
+  max-width: 1000px;
+  margin: 0 auto;
+  border-bottom: 1px solid #ccc;
+}
+
+h1, h2, h3 {
+  margin: 0 0 16px;
+  font-weight: 600;
+  text-align: left;
+}
+
+h2 {
+  font-size: 2em;
+  color: var(--primary-color);
+  padding-bottom: 10px;
+  margin-bottom: 40px;
+  border-bottom: 3px solid var(--primary-color);
+  display: block;
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+
+/* Heading animation on hover */
+h2:hover {
+  transform: rotateY(-10deg);
+  color: var(--highlight-color);
+}
+
+/* Lists */
+ul {
+  padding-left: 20px;
+  margin: 10px 0;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+/* Links */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Button */
+button {
+  padding: 10px 20px;
+  font-size: 1em;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--primary-color);
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #1d5dbf;
+}
+
+/* Profile Image */
+.profile-pic {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  padding: 5px; /* space between image and gradient ring */
+  background: linear-gradient(135deg, #2d89ef, #ffd700);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Hero Section Layout */
+.hero-section .hero-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.hero-section .text-content {
+  flex: 1;
+  min-width: 250px;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .hero-section .hero-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-section .text-content {
+    text-align: center;
+  }
+
+  .profile-pic {
+    margin-bottom: 20px;
+  }
+}
